@@ -14,8 +14,8 @@
 	<input type="search" class="light-table-filter" data-table="order-table" placeholder="Enter Tech#" /><br>
 	<input class="btn btn-primary" type="button" value="Submit" onclick='myFunc();'>
 
-  <form name="contact" netlify>
-    <input id="myInput" type="hidden" value="test">
+  <form name="contact" method="POST" data-netlify="true">
+    <input id="myInput" type="hidden" name="name" value="test">
   <table class="order-table">
 		<thead>
 			<tr>
