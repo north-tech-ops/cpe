@@ -3028,7 +3028,8 @@
 			const serial = document.getElementById(i).children[3].innerHTML;
 			if (checkbox[i-1].checked) {
 				cpeList.push(`techID:${techID} serial#${serial}`);
-			} 
+			} else {
+			    cpeList.push(document.getElementsByClassName('light-table-filter')[0].value);
 		}
     // console.log(cpeList);
     		document.getElementsByClassName('myInput')[0].value = cpeList;
