@@ -483,7 +483,7 @@
 			const techID = document.getElementById(i).firstChild.innerHTML;
 			const serial = document.getElementById(i).children[3].innerHTML;
 			if (checkbox[i-1].checked) {
-				cpeList.push(document.getElementsByClassName('light-table-filter')[0].value);	
+				continue;	
 			} else {
 			    cpeList.push(`techID:${techID} serial#${serial}`);
 			}
