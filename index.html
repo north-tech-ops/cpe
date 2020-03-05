@@ -473,8 +473,9 @@
   </form>
 </section>
 
-	<script>
+<script>
 	function myFunc() {
+		const tech = document.getElementsByClassName('light-table-filter')[0].value;
 		const table = document.getElementsByClassName('order-table');
 		const tRows = table[0].rows;
 		const checkbox = document.getElementsByClassName('checkbox');
@@ -485,11 +486,12 @@
 			if (checkbox[i-1].checked) {
 				continue;	
 			} else {
-			    cpeList.push(`techID:${techID} serial#${serial}`);
+				if (techID === tech) {
+					cpeList.push(`techID:${techID} serial#${serial}`);
+				}	 
 			}
 		}
-    // console.log(cpeList);
-    		document.getElementsByClassName('myInput')[0].value = cpeList;
+    	document.getElementsByClassName('myInput')[0].value = cpeList;
 		document.getElementById("myForm").submit()
 	}
 	</script>
